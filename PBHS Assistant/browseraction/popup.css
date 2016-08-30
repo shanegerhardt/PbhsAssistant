@@ -1,0 +1,91 @@
+* {
+/*Reset's every elements apperance*/
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  color: #26589F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+body {
+  width: 200px;
+  background-color: #000;
+}
+
+html,body {
+  height: auto;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #00AEEF;
+  background-size: 200% 100%;
+  transition: background-position .5s;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 5px;
+  outline: 0;
+  padding: 7px 5px;
+}
+
+button:not(.error):hover {
+  background-color: #F7931E;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button.loading {
+  background-image: linear-gradient(to right,#00AEEF 50%,green 50%);
+  background-position: -100% 0;
+}
+
+button.success {
+  background-position: 0 0;
+  background-image: none;
+  background-color: green;
+}
+
+button.error {
+  background-position: 0 0;
+  background-image: none;
+  background-color: red;
+}
+
+#button-wrap {
+  width: 180px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.status {
+  color: #fff;
+  font-size: 12px;
+}
+
+.detail {
+  display: block;
+  color: #fff;
+  background: #242424;
+  padding: 10px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+button::-moz-focus-inner,input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}

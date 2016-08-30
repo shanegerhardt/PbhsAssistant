@@ -1,0 +1,48 @@
+#pbhsAssistantInfoWindow button {
+  display: inline-block;
+  position: relative;
+  padding: .61538462em 1em;
+  vertical-align: middle;
+  min-height: 2.46153846em;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  touch-action: manipulation;
+  transition: all .1s ease-in;
+  color: #FFF;
+  background-color: #00AEEF;
+  border-color: #2c7cb5;
+  box-shadow: inset 0 1px 0 #92d1ff;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  font-size: 14px;
+}
+
+#pbhsAssistantInfoWindow button:hover {
+  color: rgba(255,255,255,0.9);
+  background-color: #2c7cb5;
+  border-color: #094169;
+  box-shadow: inset 0 1px 0 #177fca;
+}
+
+#pbhsAssistantInfoWindow button:focus {
+  color: rgba(255,255,255,0.9);
+  background-color: #2c7cb5;
+  border-color: #10609a;
+  box-shadow: inset 0 1px 0 #177fca;
+}
+
+#pbhsAssistantInfoWindow {
+  background: #fff;
+  border-color: #fbfbfb;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 6px;
+}

@@ -1,0 +1,103 @@
+{
+  "plugins" : [
+    {
+      "adminLogin" : {
+        "title" : "Auto Login",
+        "name" : "adminLogin",
+        "description" : "Login saves time while logging in to our wordpress or old template sites. Just set up your credentials on the User Credentials Page.",
+        "type" : "button"
+      },
+
+      "comboVideoUpgrade" : {
+        "title" : "Video Upgrader",
+        "name" : "comboVideoUpgrade",
+        "description" : "Replaces old Silent Animation and Human Touch Video code with the new shortcode option.",
+        "type" : "button"
+      },
+
+      "mapFix" : {
+        "title" : "Map Fix",
+        "name" : "mapFix",
+        "description" : "Strips out old broken map code and replaces it with the [MAP] shortcode.",
+        "type" : "button"
+      },
+
+      "ulFix" : {
+        "title" : "Fix Lists",
+        "name" : "ulFix",
+        "description" : "Removes &amp;#13; from the source code to prevent lists from breaking.",
+        "type" : "button"
+      },
+
+      "copyInfo" : {
+        "title" : "Copy Info",
+        "name" : "copyInfo",
+        "description" : "Copies Information from old template sites. Useless without Paste Info.",
+        "type" : "button"
+      },
+
+      "pasteInfo" : {
+        "title" : "Paste Info",
+        "name" : "pasteInfo",
+        "description" : "Pastes information previously copied with Copy Info. Useless without Copy Info.",
+        "type" : "button"
+      },
+
+      "purgeCustomStyles" : {
+        "title" : "Purge Custom Styles",
+        "name" : "purgeCustomStyles",
+        "description" : "Purge the custom css generated through the design options.",
+        "type" : "button"
+      },
+
+      "purgeFiles" : {
+        "title" : "Purge theme.css",
+        "name" : "purgeFiles",
+        "description" : "Equivalent to using the 'Purge Files' button in the admin. This will clear the cached theme.css file and reload the page.",
+        "type" : "button"
+      },
+
+      "purgeMinified" : {
+        "title" : "Purge Minified Files",
+        "name" : "comboVideoUpgrade",
+        "description" : "Equivalent to using the 'Purge Files' button in the admin with the minify option. This will clear the minified files and reload the page.",
+        "type" : "button"
+      },
+
+      "themeInfo" : {
+        "title" : "Theme Info",
+        "name" : "themeInfo",
+        "description" : "Returns the theme directory of the current page.",
+        "type" : "status"
+      },
+
+      "seoCheckUp" : {
+        "title" : "SEO Check Up",
+        "name" : "seoCheckUp",
+        "description" : "Runs in the background to check for common SEO issues. Useful for On Page setups",
+        "type" : "status"
+      },
+
+      "dnsLookup" : {
+        "title" : "DNS Lookup",
+        "name" : "dnsLookup",
+        "description" : "Returns dns information for the current site. Similar to dnsStuff",
+        "type" : "tool"
+      },
+
+      "purgeCodeCache" : {
+        "title" : "Purge Code Cache",
+        "name" : "purgeCodeCache",
+        "description" : "Purge the memory cache for php files on wordpress sites.",
+        "type" : "button"
+      },
+
+      "liveWidgetView" : {
+        "title" : "Live Widget View",
+        "name" : "liveWidgetView",
+        "description" : "Loads into the live widget view for a wordpress site.",
+        "type" : "button"
+      }
+    }
+  ]
+}

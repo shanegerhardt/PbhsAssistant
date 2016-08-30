@@ -1,0 +1,411 @@
+/*
+ * pbhs-orange: #F7931E
+ * pbhs-blue: #3686BE
+ * pbhs-blue-dark: #215F8B
+ */
+html {
+  font-size: 10px;
+}
+
+body {
+  background: #ECECEC;
+  font-size: 1.5rem;
+  font-family: 'Open Sans',sans-serif;
+}
+
+/* Header Styles */
+header {
+  background: #215F8B;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.brand:before {
+  content: '';
+  background: url(../../icons/38x38.png) no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  left: .3em;
+  top: .55em;
+}
+
+.brand {
+  color: #fff;
+  padding: 0;
+  font-size: 2.5rem;
+  padding: .75em 1.9em;
+}
+
+/* Wrap Styles */
+.wrap {
+  position: relative;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 7.15rem;
+  bottom: 0;
+  width: 25rem;
+  overflow-y: auto;
+  background: #3686BE;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.sidebar-nav li {
+  font-size: .75em;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: .75em 1em;
+}
+
+.sidebar-nav li a:hover,.sidebar-nav li a.active {
+  text-decoration: none;
+  color: #fff;
+  background: #F7931E;
+}
+
+.sidebar-nav li a:active,.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* Content Styles */
+#content {
+  min-height: 20rem;
+  right: 0;
+  position: absolute;
+  left: 25rem;
+  padding: 0 1rem 3rem;
+  top: 7.15rem;
+}
+
+.well {
+  background-color: #242424;
+  color: #fff;
+  padding: 1.6rem;
+  margin: 1rem 0;
+}
+
+.credential-form > .well {
+	background: none;
+	padding: 1rem;
+}
+
+.flex-form h2 {
+  display: inline-block;
+  margin: 0 1rem 0 0;
+  flex: 2;
+}
+
+.form-group {
+  display: inline;
+}
+
+/* input styles */
+.flex-form {
+  display: flex;
+  flex-wrap: wrap;
+	background-color: #242424;
+	padding: 1.6rem;
+}
+
+.labeled-input {
+  display: flex;
+  height: 3.7rem;
+}
+
+.labeled-input-field,.labeled-input-field:focus {
+  flex: 1;
+  outline: none;
+}
+
+.labeled-input-item {
+  background: #3686BE;
+  color: #242424;
+}
+
+.labeled-input-field,.labeled-input-item {
+  border: 1px solid #3686BE;
+  padding: .5em .75em;
+}
+
+.labeled-input-field:last-child,.labeled-input-item:last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.labeled-input-item {
+  border-radius: 2px 0 0 2px;
+}
+
+/* button styling */
+.btn {
+  background: none;
+  border: none;
+  padding: 9px 20px;
+  color: #fff;
+  outline: 0 !important;
+	position: relative;
+	background: #215F8B;
+	transition: all 0.5s ease;
+	overflow: hidden;
+}
+
+.btn-text {
+	transform:translateY(0);
+	display: block;
+}
+
+/*
+.btn-danger {
+  background: #E63535;
+}
+
+.btn-success {
+  background: #35E63E;
+}
+*/
+
+.btn:before {
+	content: '\f164';
+	font-family: FontAwesome;
+	color: white;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	font-size: 30px;
+	top: -34px;
+	transform:translateY(0);
+}
+
+.btn:after {
+	content: '\f165';
+	font-family: FontAwesome;
+	color: white;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	font-size: 30px;
+	top: 34px;
+}
+
+.btn.saved-success {
+	animation-name: successAnimationBtn;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.btn.saved-success:before {
+	animation-name: successAnimationIcon;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.btn.saved-success .btn-text {
+	animation-name: successAnimationIcon;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.btn.saved-error {
+	animation-name: errorAnimationBtn;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.btn.saved-error:after {
+	animation-name: errorAnimationIcon;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+.btn.saved-error .btn-text {
+	animation-name: errorAnimationIcon;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@keyframes successAnimationBtn {
+	50%, 85% {background: #35E63E;}
+	100% {background: #215F8B;}
+}
+
+@keyframes successAnimationIcon {
+	25%, 80% {transform:translateY(37px);}
+	100% {transform:translateY(0);}
+}
+
+@keyframes errorAnimationBtn {
+	50%, 85% {background: #E63535;}
+	100% {background: #215F8B;}
+}
+
+@keyframes errorAnimationIcon {
+	25%, 80% {transform:translateY(-31px);}
+	100% {transform:translateY(0);}
+}
+
+/* layout option styling */
+.checkbox > input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.layout-container {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+  transition: all .2s ease-in-out;
+}
+
+.checkbox > label:hover .layout-container {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+}
+
+.layout-title {
+  text-align: center;
+  font-size: 2rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.layout-description {
+  margin: 0;
+  cursor: pointer;
+  height: 13.2rem;
+  overflow: scroll;
+}
+
+.checkbox > input + label .layout-enabled {
+  opacity: 0;
+  color: #35E63E;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  transition: all .5s ease;
+}
+
+.checkbox > input:checked + label .layout-enabled {
+  opacity: 1;
+}
+
+.checkbox > input + label .layout-disabled {
+  opacity: 1;
+  color: #E63535;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  transition: all .5s ease;
+}
+
+.checkbox > input:checked + label .layout-disabled {
+  opacity: 0;
+}
+
+.flex-row {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.flex-row > .checkbox {
+  display: flex;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin: 0 0 2rem;
+}
+
+.flex-row > .credential-form {
+	display: flex;
+  width: 100%;
+  float: left;
+  position: relative;
+  margin: 0 0 2rem;
+}
+
+.flex-row > .checkbox > label {
+  padding: 0 1rem;
+}
+
+.labeled-input {
+	width: 100%;
+	margin: 9px 0;
+}
+
+@media (max-width: 768px) {
+	#sidebar {
+		width: 100%;
+		bottom: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);
+	}
+
+	#content {
+		left: 0;
+    top: 18.75rem;
+	}
+
+	.btn {
+		width: 100%;
+		margin: 10px 0;
+	}
+
+	.credential-form > .well {
+    width: 100%;
+	}
+
+	.flex-row > .checkbox > label {
+    width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+	.flex-row > .checkbox {
+		width: 50%;
+	}
+}
+
+@media (min-width: 991px) {
+	.flex-row > .checkbox {
+		width: 33.33%;
+	}
+	.flex-row > .credential-form {
+	  width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.flex-row > .checkbox {
+		width: 25%;
+	}
+}

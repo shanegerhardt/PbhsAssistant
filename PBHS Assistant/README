@@ -1,0 +1,109 @@
+******************
+* PBHS Assistant *
+******************
+
+PBHS Assistant compiles useful shortcuts that help with setting up and finding information about our wordpress themes.
+
+| USAGE |
+
+To use this extension just drag this directory into the extensions page of google chrome.
+To use the login function of this extension make sure to set your usernames and passwords in the options page.
+
+| CHANGE LOG |
+
+** 1.2.2 **
+Fixed the theme view function.
+
+** 1.2.1 **
+Added a shortcut to load the live widget view for a wordpress site.
+
+Content scripts are now executed when needed instead of all the scripts being loaded at once.
+This allows you to register a new script without adding it to the manifest file.
+Now only the globalFunctions script is loaded at first.
+
+** 1.2.0 **
+Created paFunctions, a javascript object that holds all of the registered functions. With this in place really long switch statements
+aren't needed, just pass in the request.type and as long as a function exists with that name it will run.
+
+Added a button to purge files from the new memory cache.
+
+Functions that require being logged in now only run when the user is logged in.
+
+** 1.1.1 **
+Fixed ajax code so that it will run on secure sites
+
+** 1.1.0 **
+Added DNS Lookup tool.
+
+** 1.0.2 **
+Can now navigate to the new 212X templates using the omnibar shortcut
+
+** 1.0.1 **
+You can use the purge files button to purge the theme.css file again. It uses the new tag: purge to purge all of the files
+specified by the themes web.config file.
+
+** 1.0.0 **
+The one that changes everything. again.
+
+Removed all of the button/status specific code from the popup.
+Now everything uses a common callback depending on the type and any messages are set directly in the content scripts.
+
+To add a new feature (plugin) define your plugin in plugins.json in the options folder by giving it a title, name, description, and type.
+This will set up a toggle in the options page and depending on the type a button or status field in the popup.
+Next you'll add your plugin code to the scripts folder. Name your js file with the same name you provided in your plugins.json entry
+
+You will still need to hook up your button and your function by setting up a listener in background.js, just follow the other examples for that.
+
+To pass information back to the button use the callback to send a status object with fields for 'completed' (bool) and 'message' (string)
+The button or status field will handle an error situation (completed : false) and display the message to the user.
+
+** 0.10.3 **
+Cleaned up the options page.
+
+** 0.10.2 **
+Fixed bad logic that ran SEO check up whenever it wanted to run
+
+** 0.10.1 **
+SEO Page check only runs if user has enabled the SEO Check up module in their layout settings
+
+** 0.10.0 **
+Added SEO Check up functionality
+Checks page for images without alt tags, badly formed page slugs, and images that are bigger than they need to be
+
+** 0.9.1 **
+Updated input values for paste function
+Added Specialty and Nearby Locations fields to copy/paste functions
+
+** 0.9.0 **
+Right click to purge! Right click on any image and you will have the option to purge it from the cdn.
+This will only work on images sourced from pbhs-sites/freewaysites. Attempting to purge any other image will
+result in an alert message to the user.
+
+Version numbers will now follow this format: MAJOR.MINOR.PATCH
+An increase in the MAJOR number occurs when there is a re-write or re-organization of the code such that the functions interact differently than before (re-writing the communication among content, background, and popup scripts)
+An increase in the MINOR number occurs when there is a new feature ( adding login functionality )
+An increase in the PATCH number occurs when an existing feature is fixed or modified ( changing login function to one click instead of two )
+
+Version numbers are always increased by one and an increase in a number will reset all following numbers to 0.
+This will be more meaningful once we hit a 1.0.0 release.
+
+
+** 0.8.2.1 **
+Updated copy/paste function to target recently updated input fields in WordPress admin
+
+** 0.8.2 **
+Login button now only requires one click
+
+** 0.8.1 **
+Added option to clear minified files.
+Moved some of the more globally useful functions into their own file.
+Removed unnecessary log messages.
+
+** 0.8.0 **
+Refactored code and added comments to hopefully make it easier to add additional functionality.
+All functions now communicate with the popup in the same way.
+Updated change log to only contain the last 5 updates.
+Removed feature description from read me as the options page contains descriptions of each function already.
+
+** 0.7.7 **
+Added purge files button.
